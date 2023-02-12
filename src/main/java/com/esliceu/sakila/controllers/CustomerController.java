@@ -16,5 +16,9 @@ public class CustomerController {
         return "homepage";
     }
 
-
+    @GetMapping("/customers")
+    public String customers(Model model){
+        model.addAttribute("customers", clientService.findAll());
+        return "customers";
+    }
 }
