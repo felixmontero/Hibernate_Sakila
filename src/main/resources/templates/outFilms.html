@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Out FILMS</title>
+</head>
+<body>
+  <h1>Out FILMS</h1>
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Release Date</th>
+            <th scope="col">Genre</th>
+            <th scope="col">Director</th>
+            <th scope="col">Price</th>
+            <th scope="col">Return</th>
+        </tr>
+        </thead>
+        <tr th:each="film : ${films}">
+            <td scope="row" class="table-light" th:text="${film.title}"></td>
+            <td scope="row" class="table-light" th:text="${film.releaseDate}"></td>
+            <td scope="row" class="table-light" th:text="${film.genre}"></td>
+            <td scope="row" class="table-light" th:text="${film.director}"></td>
+            <td scope="row" class="table-light" th:text="${film.price}"></td>
+            <td scope="row" class="table-light"><a th:href="@{/returnFilm/{id}(id=${film.id})}">Return</a></td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -21,4 +21,5 @@ public class CustomerController {
         model.addAttribute("customers", clientService.findAll());
         return "customers";
     }
+
 }
