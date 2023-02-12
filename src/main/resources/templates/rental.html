@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RENTAL</title>
+</head>
+<body>
+<h1>RENTAL</h1>
+    <h2>Customer:</h2>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" value="name">
+    <label for="surname">Surname</label>
+    <input type="text" id="surname" name="surname" value="surname">
+    <label for="films">Films</label>
+    <select id="films" name="films" th:each="film : ${films}">
+        <option th:text="${film.title}"></option>
+    </select>
+    <input type="submit" value="Create">
+</body>
+</html>
